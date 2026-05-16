@@ -1,6 +1,6 @@
 # marketing-performance-analysis
 End-to-end marketing performance analysis for a talent representation agency. Medallion pipeline (Bronze to Gold), SQL Server, Power BI. Identified $97K budget misallocation driving a 36% deal closure decline.
-# Madre Talent Group — Marketing Performance Analysis
+# Madre Talent Group: Marketing Performance Analysis
 
 **Role:** Data Analyst & BI Developer  
 **Period:** January – April 2026  
@@ -19,17 +19,17 @@ A Canadian talent representation agency managing 45 talents across music, comedy
 An end-to-end analytics pipeline from five raw data sources to a Power BI dashboard that identified exactly where the budget was going and why deals were falling.
 
 **Data sources:**
+- Talent profiles
 - Deal pipeline (HubSpot export)
 - Meta Ads campaign performance
 - Google Ads campaign performance
 - Email campaign performance
-- Talent profiles
 
 **Pipeline architecture:**
 
 Bronze → Pre-Silver → Silver → Gold
 
-Each layer documented. Every transformation decision recorded in an Admin schema. Nothing deleted from Bronze.
+Each layer is documented. Every transformation decision is recorded in an Admin schema. Nothing was deleted from Bronze.
 
 ---
 
@@ -40,7 +40,7 @@ Raw ingestion. All five sources loaded as NVARCHAR to preserve source fidelity b
 
 **Pre-Silver**
 Dirty data handling before type casting:
-- 13 acquisition channel variants standardised to 5 canonical values via lookup table
+- 13 acquisition channel variants standardised to 5 canonical values via a lookup table
 - Talent ID format mismatch corrected with LPAD normalisation (TLT1 → TLT001)
 - Categorical fields standardised across all tables
 
